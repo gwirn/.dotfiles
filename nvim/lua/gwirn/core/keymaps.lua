@@ -18,24 +18,20 @@ vim.keymap.set("n", "<leader>l", ">>", { desc = "right intend" })
 vim.keymap.set("n", "<leader>h", "<<", { desc = "left intend" })
 vim.keymap.set("n", "p", ":pu <CR>", { desc = "paste on newline" })
 vim.keymap.set("n", "<leader>db", ":bw! <CR>", { desc = "erase buffer and all its memmory" })
-vim.keymap.set("n", "<leader>xc", ":w<CR>:RunCode <CR>:winc p <CR>", { desc = "execute code" })
-vim.keymap.set("n", "<leader>w", "<c-w><c-w>", { desc = "change windows" })
 -- Keymaps for better default experience
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
-vim.keymap.set("n", "<leader>xx", ":w <CR> :source % <CR>", { desc = "source current file" })
+vim.keymap.set("n", "<leader>sx", ":w <CR> :source % <CR>", { desc = "source current file" })
 vim.keymap.set("t", "<leader><ESC>", "<C-\\><C-N>", { desc = "back to normal mode", noremap = true })
 -- Remap for dealing with word wrap
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
-local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
-vim.api.nvim_create_autocmd("TextYankPost", {
-	callback = function()
-		vim.highlight.on_yank()
-	end,
-	group = highlight_group,
-	pattern = "*",
-})
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+vim.keymap.set("n", "<leader>v", ":wq<CR>", { desc = "write and quite file" })
+vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "write file" })
+vim.keymap.set("n", "<leader>x", ":q<CR>", { desc = "quit file" })
+
 vim.keymap.set("n", "<leader>cb", function()
 	require("poseidon").buffer_nav(1)
 end, { desc = "[C]hange between all [B]uffers" })
@@ -47,3 +43,12 @@ end, { desc = "[C]hange between buffers of same [F]iletype" })
 vim.keymap.set("n", "<leader>j", function()
 	require("artemis").visjump()
 end, { desc = "navigate [J]ump list" })
+
+local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+vim.api.nvim_create_autocmd("TextYankPost", {
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+	group = highlight_group,
+	pattern = "*",
+})
