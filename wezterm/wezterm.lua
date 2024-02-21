@@ -13,14 +13,15 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
--- config.color_scheme = 'Elemental'
+-- config.color_scheme = "Elemental"
 config.color_scheme = "Equilibrium Dark (base16)"
 
 -- config.enable_tab_bar = false
 config.font_size = 13.0
 config.window_decorations = "RESIZE"
 config.default_cursor_style = "SteadyBar"
-window_background_opacity = 0.85
+
+config.audible_bell = "Disabled"
 
 config.mouse_bindings = {
 	-- Bind 'Up' event of CTRL-Click to open hyperlinks
