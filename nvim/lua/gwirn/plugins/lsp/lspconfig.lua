@@ -76,6 +76,7 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
+		lspconfig["jedi_language_server"].setup({ capabilities = capabilities, on_attach = on_attach })
 		lspconfig["gopls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
