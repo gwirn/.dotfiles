@@ -1,1 +1,1 @@
-vim.cmd('nnoremap ## i# <ESC>')
+vim.keymap.set("n", "##", "i# <ESC>", { desc = "comment" })

@@ -37,7 +37,7 @@ vim.keymap.set("n", "<leader>cb", function()
 	require("poseidon").buffer_nav(1)
 end, { desc = "[C]hange between all [B]uffers" })
 
-vim.keymap.set("n", "<leader>cf", function()
+vim.keymap.set("n", "<leader>f", function()
 	require("poseidon").buffer_nav()
 end, { desc = "[C]hange between buffers of same [F]iletype" })
 
