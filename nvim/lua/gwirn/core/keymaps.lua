@@ -18,6 +18,7 @@ vim.keymap.set("n", "<leader>l", ">>", { desc = "right intend" })
 vim.keymap.set("n", "<leader>h", "<<", { desc = "left intend" })
 vim.keymap.set("n", "p", ":pu <CR>", { desc = "paste on newline" })
 vim.keymap.set("n", "<leader>db", ":bw! <CR>", { desc = "erase buffer and all its memmory" })
+vim.keymap.set("i", "<ESC>", "<ESC>l")
 -- Keymaps for better default experience
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 vim.keymap.set("n", "<leader>sx", ":w <CR> :source % <CR>", { desc = "source current file" })
