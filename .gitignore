@@ -1,3 +1,2 @@
-/en.utf-8.add.spl
-/en.utf-8.add
-/lazy-lock.json
+nvim/spell
+nvim/lazy-lock.json
