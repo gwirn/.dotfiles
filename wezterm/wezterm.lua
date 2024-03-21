@@ -14,7 +14,9 @@ end
 
 -- For example, changing the color scheme:
 -- config.color_scheme = "Elemental"
-config.color_scheme = "Equilibrium Dark (base16)"
+-- config.color_scheme = "Equilibrium Dark (base16)"
+-- config.color_scheme = "Sweet Love (terminal.sexy)"
+config.color_scheme = "s3r0 modified (terminal.sexy)"
 
 -- config.enable_tab_bar = false
 config.font_size = 13.0
