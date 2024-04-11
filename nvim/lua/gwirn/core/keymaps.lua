@@ -35,8 +35,18 @@ vim.keymap.set("n", "<leader>x", vim.diagnostic.setloclist, { desc = "Open diagn
 vim.keymap.set("n", "<leader>wq", ":wq<CR>", { desc = "write and quite file" })
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "write file" })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "quit file" })
+vim.keymap.set("n", "<leader>o", ":e ", { desc = "quit file" })
 
-vim.keymap.set("n", "<leader>cb", function()
+vim.keymap.set("n", "<leader>mu", ":m -", { desc = "move line N lines up" })
+vim.keymap.set("n", "<leader>md", ":m +", { desc = "move line N lines down" })
+vim.keymap.set("n", "<M-j>", ":m+1<CR>==")
+vim.keymap.set("n", "<M-k>", ":m .-2<CR>==")
+vim.keymap.set("i", "<M-j>", "<Esc>:m .+1<CR>==gi")
+vim.keymap.set("i", "<M-k>", "<Esc>:m .-2<CR>==gi")
+vim.keymap.set("v", "<M-j>", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "<M-k>", ":m '<-2<CR>gv=gv")
+
+vim.keymap.set("n", "<leader>b", function()
 	require("poseidon").buffer_nav(1)
 end, { desc = "[C]hange between all [B]uffers" })
 
@@ -56,3 +66,4 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	group = highlight_group,
 	pattern = "*",
 })
+vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*", command = [[%s/\s\+$//e]] })

@@ -149,8 +149,8 @@ keybinds clear-defaults=true {
 		bind "Alt n" { NewPane; }
 		bind "Alt h" "Alt Left" { MoveFocusOrTab "Left"; }
 		bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
-		bind "Alt j" "Alt Down" { MoveFocus "Down"; }
-		bind "Alt k" "Alt Up" { MoveFocus "Up"; }
+		// bind "Alt j" "Alt Down" { MoveFocus "Down"; }
+		// bind "Alt k" "Alt Up" { MoveFocus "Up"; }
 		bind "Alt =" "Alt +" { Resize "Increase"; }
 		bind "Alt -" { Resize "Decrease"; }
 		bind "Alt [" { PreviousSwapLayout; }
@@ -244,25 +244,41 @@ pane_frames false
 // 	}
 // }
 
+// themes {
+//     gruvbox-dark {
+//            fg 213 196 161
+//             bg 40 40 40
+//             black 60 56 54
+//             red 204 36 29
+//            green 152 151 26
+//            yellow 215 153 33
+//            blue 69 133 136
+//            magenta 177 98 134
+//            cyan 104 157 106
+//            white 251 241 199
+//            orange 214 93 14
+//        }
+//}
 themes {
-    gruvbox-dark {
-           fg 213 196 161
-            bg 40 40 40
-            black 60 56 54
-            red 204 36 29
-            green 152 151 26
-            yellow 215 153 33
-            blue 69 133 136
-            magenta 177 98 134
-            cyan 104 157 106
-            white 251 241 199
-            orange 214 93 14
-        }
+    kanagawa-dragon {
+	// fg "#181616"
+	fg "#423e3e"
+        bg "#c5c9c5"
+        black "#0d0c0c"
+        red "#c4746e"
+        green "#8a9a7b"
+        yellow "#c4b28a"
+        blue "#8ba4b0"
+        magenta "#a292a3"
+        cyan "#8ea4a2"
+        white "#C8C093"
+        orange "#e08309"
+	}
 }
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "gruvbox-dark"
+theme "kanagawa-dragon"
 
 // The name of the default layout to load on startup
 // Default: "default"
