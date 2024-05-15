@@ -1,50 +1,61 @@
+local opt = vim.o
 -- Set highlight on search
-vim.o.hlsearch = true
+opt.hlsearch = true
 
 -- Make line numbers default
-vim.o.relativenumber = true
+opt.relativenumber = true
+opt.number = true
 
-vim.o.clipboard = "unnamedplus"
+opt.clipboard = "unnamedplus"
 
 -- Enable break indent
-vim.o.breakindent = true
+opt.breakindent = true
 
 -- Save undo history
-vim.o.undofile = true
+opt.undofile = true
 
 -- Case insensitive searching UNLESS /C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
+opt.ignorecase = true
+opt.smartcase = true
 
 -- Keep signcolumn on by default
 vim.wo.signcolumn = "yes"
 
 -- Decrease update time
-vim.o.updatetime = 250
-vim.o.timeout = true
-vim.o.timeoutlen = 300
+opt.updatetime = 250
+opt.timeout = true
+opt.timeoutlen = 300
 
 -- Set completeopt to have a better completion experience
-vim.o.completeopt = "menuone"
-vim.o.termguicolors = true
-vim.o.nocompatible = true
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
-vim.o.softtabstop = 4
-vim.o.nowrap = true
-vim.o.autoindent = true
-vim.o.expandtab = true
-vim.o.exrc = true
-vim.o.secure = true
-vim.o.showcmd = true
-vim.o.showmode = true
-vim.o.splitright = true
-vim.o.foldlevel = 99
-vim.o.wildmenu = true
-vim.o.history = 1000
-vim.o.cursorline = true
-vim.o.updatetime = 1
-vim.o.scrolloff = 40
+opt.completeopt = "menuone"
+opt.termguicolors = true
+opt.nocompatible = true
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.softtabstop = 4
+opt.nowrap = true
+opt.autoindent = true
+opt.expandtab = true
+opt.exrc = true
+opt.secure = true
+opt.showcmd = true
+opt.showmode = true
+opt.splitright = true
+opt.foldlevel = 99
+opt.wildmenu = true
+opt.history = 1000
+opt.cursorline = true
+opt.updatetime = 1
+opt.scrolloff = 40
+
+opt.pumblend = 17
+opt.inccommand = "split"
+opt.hidden = false
+opt.smoothscroll = true
+opt.belloff = "all"
+opt.mouse = "a"
 vim.cmd(":set guicursor=n-v-c-i-ci:ver25,r-cr:hor20,o:hor50")
+-- vim.cmd(":hi clear CursorLine")
+-- vim.cmd(":hi CursorLine gui=underline cterm=underline guifg=None")
