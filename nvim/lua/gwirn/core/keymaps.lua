@@ -35,6 +35,7 @@ vim.keymap.set("n", "<leader>x", vim.diagnostic.setloclist, { desc = "Open diagn
 vim.keymap.set("n", "<leader>wq", ":wq<CR>", { desc = "write and quite file" })
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "write file" })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "quit file" })
+vim.keymap.set("n", "<leader>fq", ":q!<CR>", { desc = "force quit file" })
 vim.keymap.set("n", "<leader>o", ":e ", { desc = "quit file" })
 
 vim.keymap.set("n", "<leader>mu", ":m -", { desc = "move line N lines up" })
