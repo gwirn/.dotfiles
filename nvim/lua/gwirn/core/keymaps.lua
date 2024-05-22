@@ -19,8 +19,6 @@ vim.keymap.set("n", "p", ":pu <CR>", { desc = "paste on newline" })
 vim.keymap.set("i", "<ESC>", "<ESC>l", { silent = true })
 vim.keymap.set("n", "<leader>n", ":bn<CR>", { desc = "go to next buffer" })
 vim.keymap.set("n", "<leader>p", ":bp<CR>", { desc = "go to previous buffer" })
-vim.keymap.set("n", "<leader>d", "<C-d>", { desc = "half page down" })
-vim.keymap.set("n", "<leader>u", "<C-u>", { desc = "half page up" })
 -- Keymaps for better default experience
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 vim.keymap.set("n", "<leader>sx", ":w <CR> :source % <CR>", { desc = "source current file" })
