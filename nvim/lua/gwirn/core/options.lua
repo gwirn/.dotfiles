@@ -52,7 +52,7 @@ opt.scrolloff = 40
 
 opt.pumblend = 17
 opt.inccommand = "split"
-opt.hidden = false
+opt.hidden = True
 opt.smoothscroll = true
 opt.belloff = "all"
 opt.mouse = "a"
