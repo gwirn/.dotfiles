@@ -29,13 +29,11 @@ opt.timeoutlen = 300
 -- Set completeopt to have a better completion experience
 opt.completeopt = "menuone"
 opt.termguicolors = true
-opt.nocompatible = true
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.softtabstop = 4
-opt.nowrap = true
 opt.autoindent = true
 opt.expandtab = true
 opt.exrc = true
@@ -52,10 +50,12 @@ opt.scrolloff = 40
 
 opt.pumblend = 17
 opt.inccommand = "split"
-opt.hidden = True
+opt.hidden = true
 opt.smoothscroll = true
 opt.belloff = "all"
 opt.mouse = "a"
+
+opt.tw = 88
 vim.cmd(":set guicursor=n-v-c-i-ci:ver25,r-cr:hor20,o:hor50")
 -- vim.cmd(":hi clear CursorLine")
 -- vim.cmd(":hi CursorLine gui=underline cterm=underline guifg=None")
