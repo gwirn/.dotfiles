@@ -10,3 +10,4 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost" }, {
 		Highlight_long_lines(88)
 	end,
 })
+vim.keymap.set("n", "<leader>xx", ":!cargo run %:p<CR>")

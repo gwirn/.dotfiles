@@ -66,12 +66,22 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
-		-- configure python server
+		lspconfig["bashls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+		lspconfig["sourcekit"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
 		lspconfig["ruff_lsp"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
-		lspconfig["jedi_language_server"].setup({ capabilities = capabilities, on_attach = on_attach })
+		lspconfig["jedi_language_server"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
 		lspconfig["gopls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,

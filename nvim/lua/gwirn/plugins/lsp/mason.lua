@@ -42,6 +42,7 @@ return {
 				"stylua", -- lua formatter
 				"ruff",
 				"gopls",
+				"shellcheck",
 			},
 		})
 	end,

@@ -9,3 +9,4 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost" }, {
 		Highlight_long_lines(88)
 	end,
 })
+vim.keymap.set("n", "<leader>xx", ":!python %:p<CR>")
