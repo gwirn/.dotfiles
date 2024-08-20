@@ -13,6 +13,7 @@ return {
 				lua = { "stylua" },
 				python = { "ruff_fix", "ruff_format", "black" },
 				rust = { "rustfmt" },
+				swift = { "swiftformat" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

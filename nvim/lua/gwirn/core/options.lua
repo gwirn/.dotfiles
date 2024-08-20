@@ -55,7 +55,6 @@ opt.smoothscroll = true
 opt.belloff = "all"
 opt.mouse = "a"
 
-opt.tw = 88
 vim.cmd(":set guicursor=n-v-c-i-ci:ver25,r-cr:hor20,o:hor50")
 -- vim.cmd(":hi clear CursorLine")
 -- vim.cmd(":hi CursorLine gui=underline cterm=underline guifg=None")

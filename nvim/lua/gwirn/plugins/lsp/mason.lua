@@ -43,6 +43,7 @@ return {
 				"ruff",
 				"gopls",
 				"shellcheck",
+				"swiftlint",
 			},
 		})
 	end,

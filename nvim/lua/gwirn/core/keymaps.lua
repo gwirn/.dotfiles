@@ -15,7 +15,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "J", "mzJ`z", { desc = "move one line below into current line" })
 vim.keymap.set("n", "<leader>l", ">>", { desc = "right intend" })
 vim.keymap.set("n", "<leader>h", "<<", { desc = "left intend" })
-vim.keymap.set("n", "p", ":pu <CR>", { desc = "paste on newline" })
+vim.keymap.set("n", "P", ":pu <CR>", { desc = "paste on newline" })
 vim.keymap.set("i", "<ESC>", "<ESC>l", { silent = true })
 vim.keymap.set("n", "<leader>n", ":bn<CR>", { desc = "go to next buffer" })
 vim.keymap.set("n", "<leader>p", ":bp<CR>", { desc = "go to previous buffer" })
@@ -28,7 +28,6 @@ vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set("n", "<C-^>", "<Nop>")
 
-vim.keymap.set("i", "jj", "<ESC>", { noremap = false })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set("n", "<leader>x", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 vim.keymap.set("n", "<leader>wq", ":wq<CR>", { desc = "write and quite file" })
@@ -45,6 +44,20 @@ vim.keymap.set("i", "<M-j>", "<Esc>:m .+1<CR>==gi")
 vim.keymap.set("i", "<M-k>", "<Esc>:m .-2<CR>==gi")
 vim.keymap.set("v", "<M-j>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<M-k>", ":m '<-2<CR>gv=gv")
+
+vim.keymap.set("n", "<leader>c", "z=")
+vim.keymap.set("v", ",s", ":s/")
+vim.keymap.set("n", ",s", "V:s/", { desc = "Substitute in one line" })
+vim.keymap.set(
+	"n",
+	"<leader>r",
+	":s/<C-r><C-w>//g<Left><Left>",
+	{ desc = "replace word under cursor in current line", noremap = true }
+)
+
+vim.keymap.set("i", "<C-w>", "<C-o>w")
+vim.keymap.set("i", "<C-b>", "<C-o>b")
+vim.keymap.set("i", "<C-r>", "<C-o>p")
 
 vim.keymap.set("n", "<leader>b", function()
 	require("poseidon").buffer_nav(1)
