@@ -39,6 +39,9 @@ config.mouse_bindings = {
 		action = act.Nop,
 	},
 }
+config.colors = {
+	cursor_bg = "orange",
+}
 
 -- and finally, return the configuration to wezterm
 return config
