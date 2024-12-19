@@ -24,7 +24,7 @@ config.window_decorations = "RESIZE"
 config.default_cursor_style = "SteadyBar"
 
 config.audible_bell = "Disabled"
-
+config.font = wezterm.font_with_fallback({ "JetBrains Mono", "Apple Color Emoji" })
 config.mouse_bindings = {
 	-- Bind 'Up' event of CTRL-Click to open hyperlinks
 	{
@@ -42,6 +42,8 @@ config.mouse_bindings = {
 config.colors = {
 	cursor_bg = "orange",
 }
+
+-- config.send_composed_key_when_left_alt_is_pressed = true
 
 -- and finally, return the configuration to wezterm
 return config

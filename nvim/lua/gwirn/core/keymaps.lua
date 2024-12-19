@@ -34,7 +34,6 @@ vim.keymap.set("i", "<M-k>", "<Esc>:m .-2<CR>==gi")
 vim.keymap.set("v", "<M-j>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<M-k>", ":m '<-2<CR>gv=gv")
 
-vim.keymap.set("n", "<leader>c", "z=")
 vim.keymap.set("v", ",s", ":s/")
 vim.keymap.set("n", ",s", "V:s/", { desc = "Substitute in one line" })
 vim.keymap.set(
