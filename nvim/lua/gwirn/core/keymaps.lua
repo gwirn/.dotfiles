@@ -3,13 +3,7 @@ vim.g.maplocalleader = " "
 vim.keymap.set("n", '""', 'ciw""<ESC>hp', { desc = "sourround word with double quotes" })
 vim.keymap.set("n", "''", 'ciw""<ESC>hp', { desc = "sourround word with single quotes" })
 vim.keymap.set("n", "<CR><CR>", "o<ESC>", { desc = "insert newline without insert mode" })
-vim.keymap.set("n", "vv", '"+p', { desc = "paste from system clipboard" })
 vim.keymap.set("n", "ff", ":nohl<CR>", { desc = "clear search highlight" })
-vim.keymap.set("i", "(", "()<ESC>i")
-vim.keymap.set("i", "{", "{}<ESC>i")
-vim.keymap.set("i", "[", "[]<ESC>i")
-vim.keymap.set("i", '"', '""<ESC>i')
-vim.keymap.set("i", "'", "''<ESC>i")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "J", "mzJ`z", { desc = "move one line below into current line" })
@@ -30,11 +24,6 @@ vim.keymap.set("n", "<C-^>", "<Nop>")
 
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set("n", "<leader>x", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
-vim.keymap.set("n", "<leader>wq", ":wq<CR>", { desc = "write and quite file" })
-vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "write file" })
-vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "quit file" })
-vim.keymap.set("n", "<leader>fq", ":q!<CR>", { desc = "force quit file" })
-vim.keymap.set("n", "<leader>o", ":e ", { desc = "quit file" })
 
 vim.keymap.set("n", "<leader>mu", ":m -", { desc = "move line N lines up" })
 vim.keymap.set("n", "<leader>md", ":m +", { desc = "move line N lines down" })
@@ -80,3 +69,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	pattern = "*",
 })
 vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*", command = [[%s/\s\+$//e]] })
+vim.api.nvim_create_autocmd("InsertLeave", {
+	pattern = "*",
+	callback = function()
+		vim.lsp.buf.format()
+	end,
+})
