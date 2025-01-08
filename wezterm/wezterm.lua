@@ -39,9 +39,11 @@ config.mouse_bindings = {
 		action = act.Nop,
 	},
 }
-config.colors = {
-	cursor_bg = "orange",
-}
+local theme = require("colors/kanagawa_dragon")
+config.colors = theme
+-- config.colors = {
+-- 	cursor_bg = "orange",
+-- }
 
 -- config.send_composed_key_when_left_alt_is_pressed = true
 

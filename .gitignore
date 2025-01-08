@@ -1,3 +1,4 @@
+*.list
 nvim/spell
 nvim/lazy-lock.json
 .gsd-keyboard.settings-ported
@@ -28,4 +29,5 @@ user-dirs.locale
 .DS_Store
 Autodesk/
 xm1/
+tiling-assistant/
 systemd/

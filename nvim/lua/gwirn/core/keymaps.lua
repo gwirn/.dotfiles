@@ -68,9 +68,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	pattern = "*",
 })
 vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*", command = [[%s/\s\+$//e]] })
-vim.api.nvim_create_autocmd("InsertLeave", {
-	pattern = "*",
-	callback = function()
-		vim.lsp.buf.format()
-	end,
-})
+-- vim.api.nvim_create_autocmd("InsertLeave", {
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		vim.lsp.buf.format()
+-- 	end,
+-- })
