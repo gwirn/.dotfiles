@@ -1,6 +1,6 @@
 local misty = {
 	foreground = "#a2977c",
-	background = "#131511",
+	background = "#191817",
 
 	cursor_bg = "#FF8800",
 	cursor_fg = "#C8C093",

@@ -15,8 +15,6 @@ config.default_cursor_style = "SteadyBar"
 
 config.audible_bell = "Disabled"
 config.font = wezterm.font_with_fallback({
-	"Noto Sans Mono",
-	"DejaVu Sans Mono",
 	"JetBrains Mono",
 	"Apple Color Emoji",
 })
@@ -44,4 +42,29 @@ config.foreground_text_hsb = {
 -- config.colors = {
 -- 	cursor_bg = "orange",
 -- }
+
+config.keys = {
+	-- This will create a new split and run your default program inside it
+	{
+		key = "t",
+		mods = "CTRL|ALT|SHIFT|WIN",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "l",
+		mods = "CTRL|ALT|SHIFT|WIN",
+		action = wezterm.action({ ActivatePaneDirection = "Next" }),
+	},
+	{
+		key = "h",
+		mods = "CTRL|ALT|SHIFT|WIN",
+		action = wezterm.action({ ActivatePaneDirection = "Prev" }),
+	},
+	{
+		key = "w",
+		mods = "CTRL|ALT|SHIFT|WIN",
+		action = wezterm.action.ActivateTabRelative(1),
+	},
+}
+
 return config

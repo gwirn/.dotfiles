@@ -7,13 +7,11 @@ return {
 
 		conform.setup({
 			formatters_by_ft = {
-				go = { "goimports", "gofmt" },
-				yaml = { "prettier" },
-				markdown = { "prettier" },
+				go = { "gofmt" },
 				lua = { "stylua" },
 				python = { "ruff_fix", "ruff_format", "black" },
 				rust = { "rustfmt" },
-				swift = { "swiftformat" },
+				zig = { "zigfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

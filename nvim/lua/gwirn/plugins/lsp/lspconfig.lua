@@ -66,11 +66,7 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
-		lspconfig["bashls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-		lspconfig["sourcekit"].setup({
+		lspconfig["zls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})

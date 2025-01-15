@@ -32,6 +32,7 @@ return {
 					"vimdoc",
 					"vim",
 					"bash",
+					"zig",
 				},
 				incremental_selection = {
 					enable = true,

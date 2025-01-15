@@ -27,6 +27,7 @@ return {
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
+				"zls",
 				"ruff_lsp",
 				"gopls",
 				"rust_analyzer",
@@ -42,8 +43,6 @@ return {
 				"stylua", -- lua formatter
 				"ruff",
 				"gopls",
-				"shellcheck",
-				"swiftlint",
 			},
 		})
 	end,
