@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.keymap.set("n", '""', 'ciw""<ESC>hp', { desc = "sourround word with double quotes" })
-vim.keymap.set("n", "''", 'ciw""<ESC>hp', { desc = "sourround word with single quotes" })
+vim.keymap.set("n", "''", "ciw''<ESC>hp", { desc = "sourround word with single quotes" })
 vim.keymap.set("n", "<CR><CR>", "o<ESC>", { desc = "insert newline without insert mode" })
 vim.keymap.set("n", "ff", ":nohl<CR>", { desc = "clear search highlight" })
 vim.keymap.set("n", "n", "nzzzv")
