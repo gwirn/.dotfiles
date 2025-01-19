@@ -9,7 +9,7 @@ end
 
 -- config.color_scheme = "s3r0 modified (terminal.sexy)"
 
-config.font_size = 16.0
+config.font_size = 13.0
 config.window_decorations = "RESIZE"
 config.default_cursor_style = "SteadyBar"
 
@@ -24,6 +24,9 @@ config.inactive_pane_hsb = {
 	saturation = 0.9,
 	brightness = 0.8,
 }
+config.tab_bar_at_bottom = true
+config.use_fancy_tab_bar = false
+config.tab_and_split_indices_are_zero_based = true
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.9
 
