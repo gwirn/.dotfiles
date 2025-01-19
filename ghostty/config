@@ -1,6 +1,6 @@
 theme = "misty"
 title = " "
-font-size = 12
+font-size = 16
 cursor-color = #d75700
 cursor-text = #d78700
 cursor-style = "bar"
@@ -13,6 +13,7 @@ window-decoration = true
 window-padding-x = 5
 window-padding-y = 5
 mouse-hide-while-typing = true
+background-opacity=0.9
 
 clipboard-read = allow
 clipboard-write = allow
@@ -26,3 +27,4 @@ keybind = ctrl+cmd+alt+shift+s=new_split:right
 keybind = ctrl+cmd+alt+shift+h=goto_split:left
 keybind = ctrl+cmd+alt+shift+l=goto_split:right
 keybind = ctrl+cmd+alt+shift+t=new_tab
+keybind = ctrl+cmd+alt+shift+z=next_tab
