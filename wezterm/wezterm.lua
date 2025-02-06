@@ -60,6 +60,11 @@ config.keys = {
 	{
 		key = "z",
 		mods = "CTRL|ALT|SHIFT|WIN",
+		action = wezterm.action.ActivateTabRelative(-1),
+	},
+	{
+		key = "i",
+		mods = "CTRL|ALT|SHIFT|WIN",
 		action = wezterm.action.ActivateTabRelative(1),
 	},
 }

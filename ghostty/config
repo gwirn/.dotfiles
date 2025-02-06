@@ -1,12 +1,13 @@
 theme = "misty"
 title = " "
-font-size = 16
+font-size = 13
 cursor-color = #d75700
 cursor-text = #d78700
 cursor-style = "bar"
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
+# gtk-titlebar = false
 unfocused-split-opacity = 0.95
 macos-titlebar-style = hidden
 window-decoration = true
@@ -27,4 +28,5 @@ keybind = ctrl+cmd+alt+shift+s=new_split:right
 keybind = ctrl+cmd+alt+shift+h=goto_split:left
 keybind = ctrl+cmd+alt+shift+l=goto_split:right
 keybind = ctrl+cmd+alt+shift+t=new_tab
-keybind = ctrl+cmd+alt+shift+z=next_tab
+keybind = ctrl+cmd+alt+shift+i=next_tab
+keybind = ctrl+cmd+alt+shift+z=previous_tab

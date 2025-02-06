@@ -2,7 +2,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.keymap.set("n", '""', 'ciw""<ESC>hp', { desc = "sourround word with double quotes" })
 vim.keymap.set("n", "''", "ciw''<ESC>hp", { desc = "sourround word with single quotes" })
-vim.keymap.set("n", "<CR><CR>", "o<ESC>", { desc = "insert newline without insert mode" })
 vim.keymap.set("n", "ff", ":nohl<CR>", { desc = "clear search highlight" })
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
@@ -23,7 +22,9 @@ vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 vim.keymap.set("n", "<C-^>", "<Nop>")
 
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
-vim.keymap.set("n", "<leader>x", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+vim.keymap.set("n", "<leader>d", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+vim.keymap.set("n", "<leader>qq", "<C-w>p:q <CR>", { desc = "close quick fix list from buffer" })
+vim.keymap.set("n", "<leader>w", "<C-w>p", { desc = "move to previous window" })
 
 vim.keymap.set("n", "<leader>mu", ":m -", { desc = "move line N lines up" })
 vim.keymap.set("n", "<leader>md", ":m +", { desc = "move line N lines down" })
