@@ -5,6 +5,10 @@ vim.keymap.set("n", "##", "i% <ESC>", { desc = "comment" })
 
 vim.keymap.set("i", '"', '"')
 vim.keymap.set("i", "'", "'")
+vim.keymap.set("i", "aa", '{\\"a}')
+vim.keymap.set("i", "oo", '{\\"o}')
+vim.keymap.set("i", "uu", '{\\"u}')
+vim.keymap.set("i", "sss", '{\\"ss}')
 vim.o.tw = 200
 vim.keymap.set("n", "<leader>xx", ":!pdflatex %:p:r<CR>")
 vim.keymap.set("n", "<leader>xo", ":!open %:p:r.pdf<CR>")
