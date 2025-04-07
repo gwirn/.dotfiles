@@ -9,7 +9,7 @@ return {
 			formatters_by_ft = {
 				go = { "gofmt" },
 				lua = { "stylua" },
-				python = { "ruff_fix", "ruff_format", "black" },
+				python = { "ruff_fix", "ruff_format" },
 				rust = { "rustfmt" },
 				zig = { "zigfmt" },
 			},

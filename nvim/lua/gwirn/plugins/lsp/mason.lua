@@ -28,7 +28,6 @@ return {
 			-- list of servers for mason to install
 			ensure_installed = {
 				"zls",
-				"ruff_lsp",
 				"gopls",
 				"rust_analyzer",
 				"jedi_language_server",
