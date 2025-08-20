@@ -1,6 +1,8 @@
 local opt = vim.o
 -- Set highlight on search
 opt.hlsearch = true
+opt.winborder = "rounded"
+opt.completeopt = "menuone,noinsert,noselect,fuzzy,popup"
 
 -- Make line numbers default
 opt.relativenumber = true
@@ -27,7 +29,6 @@ opt.timeout = true
 opt.timeoutlen = 300
 
 -- Set completeopt to have a better completion experience
-opt.completeopt = "menuone"
 opt.termguicolors = true
 opt.tabstop = 4
 opt.shiftwidth = 4
@@ -56,5 +57,3 @@ opt.belloff = "all"
 opt.mouse = "a"
 
 vim.cmd(":set guicursor=n-v-c-i-ci:ver25,r-cr:hor20,o:hor50")
--- vim.cmd(":hi clear CursorLine")
--- vim.cmd(":hi CursorLine gui=underline cterm=underline guifg=None")
