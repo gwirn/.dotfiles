@@ -55,5 +55,5 @@ opt.hidden = true
 opt.smoothscroll = true
 opt.belloff = "all"
 opt.mouse = "a"
-
+vim.o.laststatus = 3
 vim.cmd(":set guicursor=n-v-c-i-ci:ver25,r-cr:hor20,o:hor50")
