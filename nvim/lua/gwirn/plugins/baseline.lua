@@ -1,9 +1,10 @@
 return {
     {
-        "gwirn/bs_line",
+        "gwirn/baseline",
         config = function()
             -- Default options:
-            require("bs_line").setup()
+            require("baseline").setup()
         end,
+        event = "BufEnter"
     }
 }

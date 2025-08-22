@@ -5,5 +5,7 @@ return {
             -- Default options:
             require("sherllock").setup()
         end,
+        event = "BufEnter",
+        ft = "sh"
     }
 }

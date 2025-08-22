@@ -1,5 +1,6 @@
 return {
-	{
-		"gwirn/poseidon",
-	},
+    {
+        "gwirn/poseidon",
+        event = "BufEnter"
+    },
 }
